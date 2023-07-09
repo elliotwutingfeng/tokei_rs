@@ -1,8 +1,9 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
-    branches: [master]
+    branches: [master, dev]
 
 jobs:
   build:
@@ -29,4 +30,4 @@ jobs:
         run: earthly --version
 
       - name: Run build
-        run: earthly --ci --push +docker --repo 'ghcr.io/xampprocky/tokei_rs'
+        run: earthly --ci --push +docker --repo 'ghcr.io/elliotwutingfeng/tokei_rs'
