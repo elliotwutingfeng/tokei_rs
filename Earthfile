@@ -1,5 +1,5 @@
 VERSION 0.7
-FROM rust:latest
+FROM rust:slim
 WORKDIR /tokei_rs
 
 install-chef:
