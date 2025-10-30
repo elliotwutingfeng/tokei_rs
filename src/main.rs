@@ -365,7 +365,7 @@ async fn make_badge_style(
             label_color: GREY.to_owned(),
             msg_text: msg.to_owned(),
             msg_color: match parse(color) {
-                Ok(result) => result.to_hex_string(),
+                Ok(result) => result.to_css_hex(),
                 Err(_error) => BLUE.to_owned(),
             },
             ..Badge::default()
